@@ -20,4 +20,5 @@ def index():
     return render_template('form.html', data=submitted_data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Run on 0.0.0.0 to listen on all IPs, port 5000
+    app.run(host='0.0.0.0', port=5000, debug=True)
