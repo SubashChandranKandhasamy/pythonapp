@@ -1,0 +1,25 @@
+<!-- templates/form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+</head>
+<body>
+    <h1>Enter Your Information</h1>
+    <form method="post">
+        Name: <input type="text" name="name"><br><br>
+        Date of Birth: <input type="date" name="dob"><br><br>
+        Email: <input type="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if data %}
+        <h2>Submitted Data</h2>
+        <ul>
+            {% for key, value in data.items() %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
